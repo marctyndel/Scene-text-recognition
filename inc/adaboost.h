@@ -14,6 +14,8 @@
 #include <set>
 #include <algorithm>
 #include <math.h>
+#include <limits>
+#include <cfloat>
 
 #include <thread>
 #include <omp.h>

@@ -756,7 +756,8 @@ void ERFilter::er_ocr(ERs &all_er, vector<Mat> &channel, vector<Text> &text)
 		for (int j = 0; j < text[i].ers.size(); j++)
 		{
 			ER* er = text[i].ers[j];
-			const double result = ocr->chain_run(channel[er->ch](er->bound), er->level*THRESH_STEP, text[i].slope);
+            auto potato = channel[er->ch](er->bound);
+			const double result = ocr->chain_run(potato, er->level*THRESH_STEP, text[i].slope);
 			er->letter = floor(result);
 			er->prob = result - floor(result);
 		}
