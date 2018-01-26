@@ -7,3 +7,6 @@ video_result
 *.wmv
 *.db
 *.opendb
+
+*.o
+*.userprefs
